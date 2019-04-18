@@ -7,7 +7,12 @@
 ### Reasonable solutions
 
 A reasonable solution should do the following:
-`items needed here`
+
+- `#[derive(Debug, PartialEq)]`
+- Reuse logic; `Clock::add_minutes` should call `Clock::new`, or vice versa.
+  Division/modulus should only occur in one of these functions.
+- Don't directly `use std::fmt::Result`. (prefer `use std::fmt`)
+- (more items here)
 
 ### Examples
 
